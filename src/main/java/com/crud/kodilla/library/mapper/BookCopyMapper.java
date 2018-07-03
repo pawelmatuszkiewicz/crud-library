@@ -11,10 +11,12 @@ import java.util.ArrayList;
 public class BookCopyMapper {
 
     public BookCopy mapToBookCopy(BookCopyDto bookCopyDto) {
+        Book book = new Book();
+        book.setId(bookCopyDto.getBookId());
         return new BookCopy(
                 bookCopyDto.getId(),
                 bookCopyDto.getStatus(),
-                new Book(bookCopyDto.getBookId(),"","", 0, new ArrayList<>()),
+                book,
                 new ArrayList<>()
         );
     }
@@ -23,7 +25,7 @@ public class BookCopyMapper {
         return new BookCopyDto(
                 bookCopy.getId(),
                 bookCopy.getStatus(),
-                null
+                bookCopy.getBook().getId()
         );
     }
 }

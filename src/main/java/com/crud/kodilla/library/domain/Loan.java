@@ -36,4 +36,11 @@ public class Loan {
     public Loan(Date borrowed) {
         this.borrowed = borrowed;
     }
+
+    public Loan(Long id, BookCopy bookCopy, Reader reader, Date borrowed) {
+        this.id = id;
+        this.bookCopy = bookCopy;
+        this.reader = reader;
+        this.borrowed = borrowed;
+    }
 }

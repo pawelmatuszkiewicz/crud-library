@@ -40,4 +40,8 @@ public class Reader {
         this.lastName = lastName;
         this.created = created;
     }
+
+    public Reader(Long id) {
+        this.id = id;
+    }
 }

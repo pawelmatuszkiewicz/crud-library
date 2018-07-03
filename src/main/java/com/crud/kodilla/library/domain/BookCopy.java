@@ -35,6 +35,11 @@ public class BookCopy {
     )
     private List<Loan> loans = new ArrayList<>();
 
+    public BookCopy(Long id, String status) {
+        this.id = id;
+        this.status = status;
+    }
+
     public BookCopy(String status) {
         this.status = status;
     }
